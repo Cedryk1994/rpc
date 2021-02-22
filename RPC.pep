@@ -18,7 +18,7 @@ if:      LDA     nbManche,d
          ORA    0x0001,i
 
          
-                         
+do:                         
          STRO    msg4,d      ;on affiche la phrase de nombre de manches restantes
          CHARO   ' ',i
          DECO    nbManche,d
@@ -32,10 +32,9 @@ if:      LDA     nbManche,d
          STRO    msg7,d ;on demande au joueur2 sa lettre
          CHARI   joueur2,d
          CHARI   joueur2,d
-
 if1:     CHARO   
 
- 
+while:    
 
 ; Declaration de variables
 joueur1:         .BYTE       0
@@ -45,10 +44,10 @@ scoreJ2:         .WORD       0
 nbManche:        .BYTE       0 
 
 msg1:             .ASCII     "-----------------------------------------------\x00"
-msg2:             .ASCII     "--- Bienvenue au jeu de roche-papier-ciseau --- \x00"
-msg3:             .ASCII     "Combien de manches voulez-vous jouer ? \x00"
-msg4:            .ASCII      "Il vous reste \x00"
-msg5:            .ASCII      "manches a jouer \x00"
-msg6:            .ASCII      "Joueur1 , quel est votre choix ? [r-p-c] \x00"
-msg7:            .ASCII      "Joueur2 , quel est votre choix ? [r-p-c] \x00"
+msgBien:          .ASCII     "--- Bienvenue au jeu de roche-papier-ciseau --- \x00"
+msgManc:          .ASCII     "Combien de manches voulez-vous jouer ? \x00"
+msgRest:          .ASCII      "Il vous reste \x00"
+msgRest1:         .ASCII      "manches a jouer \x00"
+msgJou1:          .ASCII      "Joueur1 , quel est votre choix ? [r-p-c] \x00"
+msgJou2:          .ASCII      "Joueur2 , quel est votre choix ? [r-p-c] \x00"
                   .END
